@@ -1,12 +1,12 @@
-class phantomjs($version = "1.5.0" ) {
+class phantomjs($version = "1.8.1" ) {
 
     if $::architecture == "amd64" or $::architecture == "x86_64" {
         $platid = "x86_64"
     } else {
-        $platid = "x86"
+        $platid = "i686"
     }
 
-    $filename = "phantomjs-${version}-linux-${platid}-dynamic.tar.gz"
+    $filename = "phantomjs-${version}-linux-${platid}.tar.bz2"
     $phantom_src_path = "/usr/local/src/phantomjs-${version}/"
     $phantom_bin_path = "/opt/phantomjs/"
 
